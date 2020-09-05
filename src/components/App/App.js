@@ -21,7 +21,7 @@ const businesses = [business, business, business, business, business, business];
 function App() {
   return (
     <div className="App">
-      <h1>Ravenous</h1>
+      <h1>Bhauta Bhukha</h1>
       <SearchBar />
       <BusinessList businesses={businesses} />
     </div>
