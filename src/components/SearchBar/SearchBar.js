@@ -8,6 +8,14 @@ const sortByOptions = {
 };
 
 class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      term: '',  //will refer to search term
+      location: '', //will refer to location to search near from the location
+      sortBy: 'best_match', //will represent the selected sorting option to use
+    }
+  }
 
   renderSortByOptions() {
     return Object.keys(sortByOptions).map(sortByOption => {
