@@ -36,6 +36,7 @@ class SearchBar extends Component {
       return (
         <li
           key={sortByOptionValue}
+          onClick={this.handelSortByChange.bind(this, sortByOptionValue)}
           className={this.getSortByClass(sortByOption)}
         >
           {sortByOption}
