@@ -9,6 +9,8 @@ class SearchBar extends Component {
       location: "", //will refer to location to search near from the location
       sortBy: "best_match", //will represent the selected sorting option to use
     };
+    this.handleTermChange = this.handleTermChange.bind(this);
+    this.handleLocationChange = this.handleLocationChange.bind(this);
     this.sortByOptions = {
       "Best Match": "best_match",
       "Highest Rated": "rating",
@@ -16,11 +18,11 @@ class SearchBar extends Component {
     };
   }
 
-  handelTermChange(event) {
+  handleTermChange(event) {
     this.setState({ term: event.target.value })
   }
 
-  handelLocationChange(event) {
+  handleLocationChange(event) {
     this.setState({ location: event.target.value })
   }
 
