@@ -16,6 +16,14 @@ class SearchBar extends Component {
     };
   }
 
+  handelTermChange(event) {
+    this.setState({ term: event.target.value })
+  }
+
+  handelLocationChange(event) {
+    this.setState({ location: event.target.value })
+  }
+
   getSortByClass(sortByOption) {
     if (sortByOption === this.state.sortBy) {
       return "active";
@@ -56,7 +64,7 @@ class SearchBar extends Component {
           <input placeholder="Where?" />
         </div>
         <div className="SearchBar-submit">
-          <a>Let's Go</a>
+          <a href=" ">Let's Go</a>
         </div>
       </div>
     );
