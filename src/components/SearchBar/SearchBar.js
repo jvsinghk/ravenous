@@ -11,6 +11,7 @@ class SearchBar extends Component {
     };
     this.handleTermChange = this.handleTermChange.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
     this.sortByOptions = {
       "Best Match": "best_match",
       "Highest Rated": "rating",
@@ -24,6 +25,11 @@ class SearchBar extends Component {
 
   handleLocationChange(event) {
     this.setState({ location: event.target.value })
+  }
+
+  handleSearch(event) {
+    this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+    event.preventDefault();
   }
 
   getSortByClass(sortByOption) {
