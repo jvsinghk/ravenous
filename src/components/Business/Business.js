@@ -3,8 +3,7 @@ import "./Business.css";
 
 class Business extends React.Component {
   render() {
-    let urlstring = `https://www.google.com/maps/search/?api=1&query=${this.props.business.name} ${this.props.business.address}`.replace(/ /g, "+");
-    //urlstring = urlstring.replace(/ /g, "+");
+    const urlstring = `https://www.google.com/maps/search/?api=1&query=${this.props.business.name} ${this.props.business.address}`.replace(/ /g, "+");
     return (
       <div className="Business">
         <div className="image-container">
