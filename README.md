@@ -1,12 +1,8 @@
 ## Ravenous
-
 A client-side React application, utilizing the Yelp API to search for local businesses.
 
-### For Contributors
-- To contribute fork this repo to create a remote github repo for your profile
-
 ### Clone Ravenous
-- Clone the repo by using git clone command `https://github.com/jvsinghk/ravenous.git` or `https://github.com/your-user-name/ravenous.git` if you forked
+- Clone the repo by using git clone command 
 
 ### Install Dependencies
 - Install all the dependencies by running `yarn` or `npm install`
