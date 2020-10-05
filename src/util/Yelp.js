@@ -15,6 +15,7 @@ const Yelp = {
       })
       .then((jsonResponse) => {
         if (jsonResponse.businesses) {
+          console.log(jsonResponse.businesses)
           return jsonResponse.businesses.map((business) => ({
             id: business.id,
             imageSrc: business.image_url,
@@ -26,6 +27,7 @@ const Yelp = {
             category: business.categories[0].title,
             rating: business.rating,
             reviewCount: business.review_count,
+            url: business.url,
           }));
         }
       });
