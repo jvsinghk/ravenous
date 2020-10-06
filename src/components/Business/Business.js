@@ -3,16 +3,19 @@ import "./Business.css";
 
 class Business extends React.Component {
   render() {
-    const urlstring = `https://www.google.com/maps/search/?api=1&query=${this.props.business.name} ${this.props.business.address}`.replace(/ /g, "+");
+    const googleMapAddressUrl = `https://www.google.com/maps/search/?api=1&query=${this.props.business.name} ${this.props.business.address}`.replace(/ /g, "+");
+    const yelpWebsiteUrl = this.props.business.url;
     return (
       <div className="Business">
         <div className="image-container">
-          <img src={this.props.business.imageSrc} alt="" />
+          <a href={yelpWebsiteUrl} target="_blank" rel="noopener noreferrer">
+            <img src={this.props.business.imageSrc} alt="" />
+          </a>
         </div>
         <h2>{this.props.business.name}</h2>
         <div className="Business-information">
           <div className="Business-address">
-            <a href={urlstring} target="_blank" rel="noopener noreferrer" className="Business-link">
+            <a href={googleMapAddressUrl} target="_blank" rel="noopener noreferrer" className="Business-link">
               <p>{this.props.business.address}</p>
               <p>{this.props.business.city}</p>
               <p>{`${this.props.business.state} ${this.props.business.zipCode}`}</p>
