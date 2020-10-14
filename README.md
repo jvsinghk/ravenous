@@ -1,10 +1,8 @@
 ## Ravenous
 A client-side React application, utilizing the Yelp API to search for local businesses.
 
-[![Netlify Status](https://devjasvinder-ravenous.netlify.app/)
-
 ### Clone Ravenous
-- Clone the repo by using git clone command 
+- Clone the repo by using `git clone <url>`
 
 ### Install Dependencies
 - Install all the dependencies by running `yarn` or `npm install`
